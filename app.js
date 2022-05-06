@@ -29,7 +29,7 @@ const booksRouter = require('./src/routes/booksroute');
 const authorsRouter = require('./src/routes/authorsroute');
 
 const app = express(); //Part #1 Point 1
-const port = process.env.PORT || 5000
+
 
 app.set('views','./src/views'); 
 app.set('view engine','ejs'); 
@@ -59,6 +59,6 @@ app.get('/',function(req,res){
 
 
 
-app.listen(5000,()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log("Server Ready on 5000");   //Part #1 Point 5
 });
